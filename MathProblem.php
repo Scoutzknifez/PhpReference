@@ -9,7 +9,6 @@ class ProblemType {
 
 class MathProblem {
 
-
     public function __construct($first, $second, $problemType) {
         $this->a = $first;
         $this->b = $second;
