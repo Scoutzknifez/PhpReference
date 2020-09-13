@@ -27,6 +27,6 @@ class MathProblem {
     }
 
     public function print() {
-        echo $this->a . $this->pt . $this->b . "=" . $this->solve();
+        echo $this->a . " " . $this->pt . " " . $this->b . " = " . $this->solve();
     }
 }
