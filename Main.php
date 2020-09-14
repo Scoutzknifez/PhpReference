@@ -1,6 +1,6 @@
 <?php
 
-require_once('MathProblem.php');
+require_once('./objects/MathProblem.php');
 
 $add = new MathProblem(5, 3, ProblemType::ADDITION);
 $sub = new MathProblem(10, 5, ProblemType::SUBTRACTION);
