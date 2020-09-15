@@ -8,9 +8,25 @@ $mult = new MathProblem(3, 8, ProblemType::MULTIPLICATION);
 $div = new MathProblem(36, 6, ProblemType::DIVISION);
 
 echo "<h1>Php Reference Document</h1>";
+
+// Object usage
 echo "<h4>MathProblem Object</h4>";
 
 echo $add->print() . "<br>";
 echo $sub->print() . "<br>";
 echo $mult->print() . "<br>";
 echo $div->print() . "<br>";
+
+// DateTime comparisons
+
+echo "<br><h4>DateTime comparisons</h4>";
+
+$nowDateTime = new DateTime();
+echo "Starting @ " . $nowDateTime->format('H:i:s') . "<br>";
+$skipInterval = new DateInterval("PT10S");
+$nextDateTime = $nowDateTime->add($skipInterval);
+echo "Resetting @ " . $nextDateTime->format('H:i:s') . "<br>";
+
+echo (new DateTime())->format('H:i:s') . "   <   " . 
+    $nextDateTime->format('H:i:s') . ": " . 
+    ((new DateTime() < $nextDateTime) ? "True" : "False");
