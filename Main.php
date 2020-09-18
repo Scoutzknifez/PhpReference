@@ -12,10 +12,10 @@ echo "<h1>Php Reference Document</h1>";
 // Object usage
 echo "<h4>MathProblem Object</h4>";
 
-echo $add->print() . "<br>";
-echo $sub->print() . "<br>";
-echo $mult->print() . "<br>";
-echo $div->print() . "<br>";
+echo $add . "<br>";
+echo $sub . "<br>";
+echo $mult . "<br>";
+echo $div . "<br>";
 
 // DateTime comparisons
 

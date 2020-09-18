@@ -26,7 +26,7 @@ class MathProblem {
             return $this->a / $this->b;
     }
 
-    public function print() {
-        echo $this->a . " " . $this->pt . " " . $this->b . " = " . $this->solve();
+    public function __toString() {
+        return $this->a . " " . $this->pt . " " . $this->b . " = " . $this->solve();
     }
 }
