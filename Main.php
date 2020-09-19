@@ -1,6 +1,7 @@
 <?php
 
 require_once('./objects/MathProblem.php');
+require_once('./objects/DataWrapper.php');
 
 $add = new MathProblem(5, 3, ProblemType::ADDITION);
 $sub = new MathProblem(10, 5, ProblemType::SUBTRACTION);
@@ -30,3 +31,8 @@ echo "Resetting @ " . $nextDateTime->format('H:i:s') . "<br>";
 echo (new DateTime())->format('H:i:s') . "   <   " . 
     $nextDateTime->format('H:i:s') . ": " . 
     ((new DateTime() < $nextDateTime) ? "True" : "False");
+
+
+echo "<br><h4>DataWrapper Object</h4>";
+
+echo new DataWrapper();
