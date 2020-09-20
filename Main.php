@@ -1,7 +1,7 @@
 <?php
 
 require_once('./objects/MathProblem.php');
-require_once('./objects/DataWrapper.php');
+require_once('./objects/Person.php');
 
 $add = new MathProblem(5, 3, ProblemType::ADDITION);
 $sub = new MathProblem(10, 5, ProblemType::SUBTRACTION);
@@ -33,6 +33,7 @@ echo (new DateTime())->format('H:i:s') . "   <   " .
     ((new DateTime() < $nextDateTime) ? "True" : "False");
 
 
-echo "<br><h4>DataWrapper Object</h4>";
+echo "<br><h4>Person/Student Objects</h4>";
 
-echo new DataWrapper();
+echo new Person("Cody", "Alexander") . "<br>";
+echo new Student("Hailey", "Griffith", 4.0);
