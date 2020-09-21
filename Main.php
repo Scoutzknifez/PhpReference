@@ -10,13 +10,21 @@ $div = new MathProblem(36, 6, ProblemType::DIVISION);
 
 echo "<h1>Php Reference Document</h1>";
 
-// Object usage
+// Objects in general
+// MathProblem Object
 echo "<h4>MathProblem Object</h4>";
 
 echo $add . "<br>";
 echo $sub . "<br>";
 echo $mult . "<br>";
 echo $div . "<br>";
+
+// Person/Student Object
+
+echo "<br><h4>Person/Student Objects</h4>";
+
+echo new Person("Cody", "Alexander") . "<br>";
+echo new Student("Hailey", "Griffith", 4.0);
 
 // DateTime comparisons
 
@@ -31,9 +39,3 @@ echo "Resetting @ " . $nextDateTime->format('H:i:s') . "<br>";
 echo (new DateTime())->format('H:i:s') . "   <   " . 
     $nextDateTime->format('H:i:s') . ": " . 
     ((new DateTime() < $nextDateTime) ? "True" : "False");
-
-
-echo "<br><h4>Person/Student Objects</h4>";
-
-echo new Person("Cody", "Alexander") . "<br>";
-echo new Student("Hailey", "Griffith", 4.0);
