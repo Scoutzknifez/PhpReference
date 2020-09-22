@@ -2,6 +2,7 @@
 
 require_once('./objects/MathProblem.php');
 require_once('./objects/Person.php');
+require_once('./utility/Utils.php');
 
 $add = new MathProblem(5, 3, ProblemType::ADDITION);
 $sub = new MathProblem(10, 5, ProblemType::SUBTRACTION);
@@ -42,15 +43,6 @@ echo ((new DateTime())->format('H:i:s') . "   <   " .
 
 // Calls
 echo "<br><h4>API Calls</h4>";
-$curl = curl_init();
 
 $url = "localhost:3001/api/";
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-
-$result = curl_exec($curl);
-
-curl_close($curl);
-
-echo $url . ": " . $result;
+echo $url . ": " .  CallAPI("GET", $url);
