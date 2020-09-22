@@ -36,6 +36,21 @@ $skipInterval = new DateInterval("PT10S");
 $nextDateTime = $nowDateTime->add($skipInterval);
 echo "Resetting @ " . $nextDateTime->format('H:i:s') . "<br>";
 
-echo (new DateTime())->format('H:i:s') . "   <   " . 
+echo ((new DateTime())->format('H:i:s') . "   <   " . 
     $nextDateTime->format('H:i:s') . ": " . 
-    ((new DateTime() < $nextDateTime) ? "True" : "False");
+    ((new DateTime() < $nextDateTime) ? "True" : "False"));
+
+// Calls
+echo "<br><h4>API Calls</h4>";
+$curl = curl_init();
+
+$url = "localhost:3001/api/";
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+
+$result = curl_exec($curl);
+
+curl_close($curl);
+
+echo $url . ": " . $result;
