@@ -45,4 +45,9 @@ echo ((new DateTime())->format('H:i:s') . "   <   " .
 echo "<br><h4>API Calls</h4>";
 
 $url = "localhost:3001/api/";
-echo $url . ": " .  CallAPI("GET", $url);
+echo "GET @ " . $url . ": " .  CallAPI("GET", $url);
+$data = array(
+    "id" => 3,
+    "name" => "Cody"
+);
+echo "<br>PUT @ " . ($url . "submitweather") . ": " .  CallAPI("PUT", ($url . "submitweather"), http_build_query($data));
